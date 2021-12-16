@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package test.v1;
+
+service PersonService {
+  rpc getPerson (PersonRequest) returns (PersonResponse);
+  rpc listPerson (PersonRequest) returns (ListPersonResponse);
+}
+
+
+message Person {
+    string name = 1;
+    string sex = 2;
+}
+
+message PersonRequest {
+  string id = 1;
+}
+
+message PersonResponse {
+    Person person = 1;
+}
+
+message ListPersonResponse {
+    repeated Person person = 1;
+}
+

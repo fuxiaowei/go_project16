@@ -1,0 +1,4 @@
+1.将protoc.exe和protoc-gen-go.exe复制到C:\Windows\System32目录下
+protoc --version 能够查看版本说明成功
+2.生成pb.go文件
+$ protoc --go_out=plugins=grpc:. --proto_path=. *.proto
